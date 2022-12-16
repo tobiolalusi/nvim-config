@@ -25,16 +25,8 @@ else
 fi
 echo " ✅"
 
-# generate `init.vim`
-echo -ne "Updating neovim config..."
-rm -f init.vim
-# plugins must be loaded first
-cat config/plugins.vim \
-    config/display.vim \
-    > init.vim
-nvim_config_dir="${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
-mkdir -p $nvim_config_dir
-ln -Ff init.vim $nvim_config_dir/init.vim
+# install plugins
+echo -ne "Installing plugins..."
 $HOME/nvim-macos/bin/nvim --headless +PlugInstall +qa
 echo " ✅"
 
