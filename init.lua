@@ -11,6 +11,8 @@ local core_files = {
   "globals.lua",
   "options.vim",
   "plugins.vim",
+  "keymaps.lua",
+  "autocmds.lua",
   "colorscheme.lua",
 }
 

@@ -1,7 +1,9 @@
 " ===============================================
 " Plugins setup and configurations
-" ---
-" Copyright (c) 2022 Oluwatobiloba Olalusi<hello@tobiolalusi.com>
+" ===============================================
+" author: Oluwatobiloba Olalusi
+" email: hello@tobiolalusi.com
+" website: http://tobiolalusi.com
 " ===============================================
 
 scriptencoding utf-8

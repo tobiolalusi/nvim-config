@@ -1,11 +1,11 @@
+-- ==============================================
 -- vim-plug installation and configuration
--- =======================================
+-- ==============================================
 -- author: Oluwatobiloba Olalusi
 -- email: hello@tobiolalusi.com
 -- website: http://tobiolalusi.com
--- =======================================
+-- ==============================================
 
-local api = vim.api
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')

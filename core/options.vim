@@ -1,6 +1,10 @@
-" ===============================================
-" VIM options
-" ===============================================
+" ==============================================
+" vim options
+" ==============================================
+" author: Oluwatobiloba Olalusi
+" email: hello@tobiolalusi.com
+" website: http://tobiolalusi.com
+" ==============================================
 
 scriptencoding utf-8
 
@@ -12,7 +16,6 @@ scriptencoding utf-8
 set clipboard+=unnamedplus " use clipboard
 set noshowmode " already handled by statusline plugin
 set history=500
-set visualbell noerrorbells
 set ignorecase smartcase
 
 " files
@@ -23,7 +26,6 @@ set confirm
 " layout
 set number relativenumber
 set nowrap
-set noruler
 set scrolloff=3
 
 " tabs and spaces
