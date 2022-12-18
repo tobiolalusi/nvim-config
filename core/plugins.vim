@@ -10,8 +10,3 @@ scriptencoding utf-8
 
 " Plugins installation
 lua require('plugins')
-
-" ===============================================
-" Lualine
-" ===============================================
-lua require('lualine').setup()

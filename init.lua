@@ -10,9 +10,9 @@ local api = vim.api
 local core_files = {
   "globals.lua",
   "options.vim",
-  "plugins.vim",
-  "keymaps.lua",
   "autocmds.lua",
+  "keymaps.lua",
+  "plugins.vim",
   "colorscheme.lua",
 }
 

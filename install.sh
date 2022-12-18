@@ -14,20 +14,9 @@ fi
 # TODO: create neovim installation for linux
 echo " ✅"
 
-# install vim-plug
-echo -ne "Installing vim-plug..."
-vimplug_loc="${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim
-if [[ ! -f $vimplug_loc ]]; then
-    curl -fLSso ${vimplug_loc} --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-else
-    echo -ne " (already exists)"
-fi
-echo " ✅"
-
 # install plugins
 echo -ne "Installing plugins..."
-$HOME/nvim-macos/bin/nvim --headless +PlugInstall +qa
+$HOME/nvim-macos/bin/nvim --headless +PackerCompile +PackerSync +qa
 echo " ✅"
 
 # the end!
