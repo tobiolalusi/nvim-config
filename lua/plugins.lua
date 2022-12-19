@@ -33,10 +33,7 @@ packer.startup(function(use)
   -- https://github.com/sainnhe/gruvbox-material
   use 'sainnhe/gruvbox-material'
 
-  -- icons
-  use { "kyazdani42/nvim-web-devicons", event = "VimEnter" }
-
-  -- statusline: lualine
+  -- statusline
   -- https://github.com/nvim-lualine/lualine.nvim
   use {
     "nvim-lualine/lualine.nvim",
@@ -45,12 +42,29 @@ packer.startup(function(use)
     config = [[require("config.statusline")]],
   }
 
-  -- notification: notify
+  -- notification
   -- https://github.com/rcarriga/nvim-notify
   use {
     "rcarriga/nvim-notify",
     event = "BufEnter",
     config = [[require("config.notifications")]],
+  }
+
+  -- startscreen
+  -- https://github.com/glepnir/dashboard-nvim
+  use {
+    "glepnir/dashboard-nvim",
+    event = "VimEnter",
+    config = [[require("config.startscreen")]],
+  }
+
+  -- fuzzy finder
+  -- https://github.com/nvim-telescope/telescope.nvim
+  use {
+    "nvim-telescope/telescope.nvim",
+    event = "VimEnter",
+    requires = "nvim-lua/plenary.nvim",
+    config = [[require("config.fuzzyfinder")]],
   }
 
   if packer_bootstrap then

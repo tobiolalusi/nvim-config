@@ -8,15 +8,12 @@
 
 scriptencoding utf-8
 
-" TODO: fix termguicolors issue with theme
-" if has('termguicolors')
 set termguicolors
-" endif
-
 set clipboard+=unnamedplus " use clipboard
 set noshowmode " already handled by statusline plugin
 set history=500
 set ignorecase smartcase
+set timeoutlen=500
 
 " files
 set noswapfile

@@ -12,7 +12,7 @@ local core_files = {
   "options.vim",
   "autocmds.lua",
   "keymaps.lua",
-  "plugins.vim",
+  "plugins.lua",
   "colorscheme.lua",
 }
 
