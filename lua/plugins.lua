@@ -45,6 +45,14 @@ packer.startup(function(use)
     config = [[require("config.statusline")]],
   }
 
+  -- notification: notify
+  -- https://github.com/rcarriga/nvim-notify
+  use {
+    "rcarriga/nvim-notify",
+    event = "BufEnter",
+    config = [[require("config.notifications")]],
+  }
+
   if packer_bootstrap then
     packer.sync()
   end

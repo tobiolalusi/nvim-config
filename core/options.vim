@@ -10,7 +10,7 @@ scriptencoding utf-8
 
 " TODO: fix termguicolors issue with theme
 " if has('termguicolors')
-"   set termguicolors
+set termguicolors
 " endif
 
 set clipboard+=unnamedplus " use clipboard
