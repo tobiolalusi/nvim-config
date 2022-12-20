@@ -29,14 +29,3 @@ end, {
   silent = true,
   desc = "Reload nvim config",
 })
-
--- ==============================================
--- Fuzzy finder
--- ==============================================
-local telescope_builtin = require('telescope.builtin')
-keymap.set("n", "<leader>fb", telescope_builtin.buffers, {})
-keymap.set("n", "<leader>ff", telescope_builtin.find_files, {})
-keymap.set("n", "<leader>fg", telescope_builtin.live_grep, {})
-keymap.set("n", "<leader>fh", telescope_builtin.help_tags, {})
-keymap.set("n", "<leader>fr", telescope_builtin.oldfiles, {})
-keymap.set("n", "<leader>ft", telescope_builtin.tags, {})

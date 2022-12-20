@@ -6,4 +6,8 @@
 -- website: http://tobiolalusi.com
 -- ==============================================
 
-require('lualine').setup()
+require('lualine').setup {
+  options = {
+    theme = "gruvbox-material"
+  },
+}
