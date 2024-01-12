@@ -11,13 +11,7 @@ local keymap = vim.keymap
 
 local dashboard = require('dashboard')
 
-dashboard.custom_header = {
-  "                                                                                ",
-  "                                                                                ",
-  "                                                                                ",
-  "                                                                                ",
-  "                                                                                ",
-  "                                                                                ",
+local custom_header = {
   "                                                                                ",
   "                                                                             👀 ",
   "                                                                                ",
@@ -32,49 +26,32 @@ dashboard.custom_header = {
   "              ░ ░   ░       ░      ░ ░      ░  ░     ░  ░   ░           ░   ░   ",
   "                         ░                                                      ",
   "                                                                                ",
-  "                                                                                ",
-  "                                                                                ",
-  "                                                                                ",
 }
 
-dashboard.custom_center = {
-  {
-    icon = "🔍  ",
-    desc = "Find file                                     ",
-    action = "Leaderf file --popup",
-    shortcut = "<Leader> f f",
-  },
-  {
-    icon = "📜  ",
-    desc = "Recently opened files                         ",
-    action = "Leaderf mru --popup",
-    shortcut = "<Leader> f r",
-  },
-  {
-    icon = "🖊️  ",
-    desc = "New file                                      ",
-    action = "enew",
-    shortcut = "           e",
-  },
-  {
-    icon = "🔐  ",
-    desc = "Open nvim config                              ",
-    action = "tabnew $MYVIMRC | tcd %:p:h",
-    shortcut = "<Leader> e v",
-  },
-  {
-    icon = "❌  ",
-    desc = "Quit nvim                                     ",
-    action = "qa",
-    shortcut = "           q",
-  },
+local custom_footer = {
+  "                ",
+  "🚀 [tobiolalusi]",
 }
 
-api.nvim_create_autocmd("FileType", {
-  pattern = "dashboard",
-  group = api.nvim_create_augroup("dashboard_enter", { clear = true }),
-  callback = function()
-    keymap.set("n", "q", ":qa<CR>", { buffer = true, silent = true })
-    keymap.set("n", "e", ":enew<CR>", { buffer = true, silent = true })
-  end
-})
+dashboard.setup {
+  theme = "hyper",
+  config = {
+    header = custom_header,
+    shortcut = {
+      { desc = '🆕 New file', group = 'Blue', key = 'n', action = ':enew' },
+      { desc = '❌ Quit', group = 'Red', key = 'qq', action = ':qa'},
+    },
+    project = {
+      enable = true,
+      limit = 4,
+      action = 'Telescope find_files cwd='
+    },
+    mru = {
+      limit = 6,
+    },
+    footer = custom_footer,
+  },
+  hide = {
+    statusline = false
+  }
+}

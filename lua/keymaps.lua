@@ -19,6 +19,7 @@ keymap.set("n", "<leader>ev", "<CMD>tabnew $MYVIMRC <BAR> tcd %:h<CR>", {
 })
 
 -- reload nvim config
+local vimrc = vim.fn.stdpath("config")
 keymap.set("n", "<leader>sv", function ()
   vim.cmd([[
       update $MYVIMRC

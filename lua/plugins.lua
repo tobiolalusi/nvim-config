@@ -44,7 +44,7 @@ packer.startup{
     use {
       "nvim-lualine/lualine.nvim",
       event = "VimEnter",
-      requires = "kyazdani42/nvim-web-devicons",
+      requires = "nvim-tree/nvim-web-devicons",
       config = [[require('config.statusline')]]
     }
 
@@ -61,6 +61,7 @@ packer.startup{
     use {
       "glepnir/dashboard-nvim",
       event = "VimEnter",
+      requires = "nvim-tree/nvim-web-devicons",
       config = [[require('config.startscreen')]]
     }
 
@@ -70,7 +71,17 @@ packer.startup{
       "nvim-telescope/telescope.nvim",
       event = "VimEnter",
       requires = "nvim-lua/plenary.nvim",
+      tag = "0.1.5",
       config = [[require('config.fuzzyfinder')]]
+    }
+
+    -- file explorer
+    -- https://github.com/nvim-tree/nvim-tree.lua
+    use {
+      "nvim-tree/nvim-tree.lua",
+      requires = "nvim-tree/nvim-web-devicons",
+      tag = "nvim-tree-v0.99.0",
+      config = [[require('config.explorer')]]
     }
 
     if packer_bootstrap then
