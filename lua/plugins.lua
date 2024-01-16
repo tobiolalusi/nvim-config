@@ -92,6 +92,13 @@ packer.startup{
       config = [[require('config.explorer')]]
     }
 
+    -- comments
+    -- https://github.com/numToStr/Comment.nvim
+    use {
+      "numToStr/Comment.nvim",
+      config = [[require('config.comments')]]
+    }
+
     if packer_bootstrap then
       packer.sync()
     end
