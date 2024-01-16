@@ -39,6 +39,14 @@ packer.startup{
     -- https://github.com/sainnhe/gruvbox-material
     use { "sainnhe/gruvbox-material" }
 
+    -- syntax tree: nvim-treesitter
+    -- https://github.com/nvim-treesitter/nvim-treesitter
+    use {
+      "nvim-treesitter/nvim-treesitter",
+      tag = "v0.9.1",
+      config = [[require('config.treesitter')]]
+    }
+
     -- statusline
     -- https://github.com/nvim-lualine/lualine.nvim
     use {
