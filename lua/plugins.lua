@@ -43,7 +43,6 @@ packer.startup{
     -- https://github.com/nvim-treesitter/nvim-treesitter
     use {
       "nvim-treesitter/nvim-treesitter",
-      tag = "v0.9.1",
       config = [[require('config.treesitter')]]
     }
 
@@ -79,7 +78,6 @@ packer.startup{
       "nvim-telescope/telescope.nvim",
       event = "VimEnter",
       requires = "nvim-lua/plenary.nvim",
-      tag = "0.1.5",
       config = [[require('config.fuzzyfinder')]]
     }
 
@@ -88,7 +86,6 @@ packer.startup{
     use {
       "nvim-tree/nvim-tree.lua",
       requires = "nvim-tree/nvim-web-devicons",
-      tag = "nvim-tree-v0.99.0",
       config = [[require('config.explorer')]]
     }
 
@@ -98,6 +95,12 @@ packer.startup{
       "numToStr/Comment.nvim",
       config = [[require('config.comments')]]
     }
+
+    -- git
+    -- https://github.com/tpope/vim-fugitive
+    -- https://github.com/airblade/vim-gitgutter
+    use { "tpope/vim-fugitive" }
+    use { "airblade/vim-gitgutter" }
 
     if packer_bootstrap then
       packer.sync()
