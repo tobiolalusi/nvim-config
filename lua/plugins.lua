@@ -102,6 +102,12 @@ packer.startup{
     use { "tpope/vim-fugitive" }
     use { "airblade/vim-gitgutter" }
 
+    -- guidelines
+    -- https://github.com/preservim/vim-indent-guides
+    use {
+      "https://github.com/preservim/vim-indent-guides",
+    }
+
     if packer_bootstrap then
       packer.sync()
     end
