@@ -14,6 +14,7 @@ set noshowmode " already handled by statusline plugin
 set history=500
 set ignorecase smartcase
 set timeoutlen=500
+set mouse=
 
 " files
 set noswapfile
