@@ -37,3 +37,12 @@ keymap.set("t", "<Esc>", "<C-\\><C-n>", {
   silent = true,
 })
 
+-- File explorer
+keymap.set("n", "<leader>ee", "<CMD>NvimTreeToggle<CR>", {
+  desc = "Toggle file explorer",
+})
+
+-- file structure
+keymap.set("n", "<leader>tt", "<CMD>TagbarToggle<CR>", {
+  desc = "Toggle file structure",
+})

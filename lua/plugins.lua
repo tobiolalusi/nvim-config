@@ -104,9 +104,11 @@ packer.startup{
 
     -- guidelines
     -- https://github.com/preservim/vim-indent-guides
-    use {
-      "https://github.com/preservim/vim-indent-guides",
-    }
+    use { "preservim/vim-indent-guides" }
+
+    -- file structure
+    -- https://github.com/preservim/tagbar
+    use { "preservim/tagbar" }
 
     if packer_bootstrap then
       packer.sync()

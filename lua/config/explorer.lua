@@ -15,10 +15,6 @@ local explorer = require('nvim-tree')
 
 explorer.setup {
   view = {
-    width = 30
+    width = 40
   }
 }
-
-keymap.set("n", "<leader>ee", "<CMD>NvimTreeToggle<CR>", {
-  desc = "Open file explorer",
-})
